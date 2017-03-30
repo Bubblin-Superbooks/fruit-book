@@ -1,0 +1,425 @@
+body {
+    color: white;
+    background: -webkit-radial-gradient(#01b5f0 50%, #66adf3 100%);
+    background: radial-gradient(#01b5f0 50%, #66ad83 100%);
+    height: 100vh;
+    width: 100vw;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.railways {
+    position: absolute;
+    width: 100vw;
+    bottom: 10vh;
+    color: black;
+}
+
+.toy-train {
+    position: relative;
+    width: 22vw;
+}
+
+.engine {
+    float: right;
+    position: relative;
+}
+
+.window {
+    height: 5.6vw;
+    width: 6vw;
+    background-color: #194488;
+    position: relative;
+    border: .6vw solid #000;
+}
+
+.window:before,
+.window:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    border: .6vw solid #000;
+}
+
+.window:before {
+    height: 1.4vw;
+    background-color: #F82510;
+    width: 9vw;
+    margin-top: -2.6vw;
+    margin-left: -5.2vw;
+    border-radius: 1.6vw;
+}
+
+.window:after {
+    margin-left: -1.6vw;
+    margin-top: .6vw;
+    border-radius: 50%;
+    height: 2.2vw;
+    width: 2.2vw;
+    background-color: #fff;
+}
+
+.engine-main {
+    height: 2vw;
+    width: 7vw;
+    border: .6vw solid #000;
+    background-color: #3D9A01;
+    position: absolute;
+    border-radius: 0 1.6vw 1.6vw 0;
+    right: -8.2vw;
+    bottom: -.6vw;
+}
+
+.engine-main:before {
+    content: "";
+    height: 2vw;
+    width: 1.6vw;
+    background-color: #000;
+    position: absolute;
+    top: -2.2vw;
+    left: .8vw;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    border-radius: 50% 50% 50% 50% / 90% 90% 40% 40%;
+}
+
+.engine-main:after {
+    content: "";
+    height: 2.4vw;
+    width: 1.6vw;
+    position: absolute;
+    display: block;
+    right: 1vw;
+    top: -3.6vw;
+    border-radius: 50% 50% 50% 50% / 90% 90% 40% 40%;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-color: #194488;
+    border: .6vw solid #000;
+}
+
+.engine-body {
+    height: 3.4vw;
+    width: 15vw;
+    position: absolute;
+    left: -.4vw;
+    top: 6vw;
+    background-color: #F69F00;
+    border: .6vw solid #000;
+    border-radius: 1vw;
+}
+
+.engine-body .big-wheel {
+    top: .6vw;
+    left: .4vw;
+}
+
+.engine-body .normal-wheel {
+    left: 9vw;
+    top: 1vw;
+}
+
+.engine-body:before {
+    content: "";
+    position: absolute;
+    height: 1vw;
+    width: 1vw;
+    left: -2.2vw;
+    bottom: .4vw;
+    background-color: #fff;
+    border-radius: 50%;
+    border: .6vw solid #000;
+}
+
+.wheels > div {
+    position: absolute;
+    background-color: #F82510;
+    border-radius: 50%;
+    border: .6vw solid #000;
+    -webkit-animation: wheel-rotate 1s linear infinite;
+    animation: wheel-rotate 1s linear infinite;
+}
+
+.wheels > div:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: .2vw solid #000;
+    top: 50%;
+    margin-top: -.2vw;
+}
+
+.wheels > div:after {
+    content: "";
+    height: 1.6vw;
+    width: 1.6vw;
+    position: absolute;
+    background-color: #000;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    margin-left: -.8vw;
+    margin-top: -.8vw;
+}
+
+.wheels .big-wheel {
+    width: 4.4vw;
+    height: 4.4vw;
+    -webkit-animation-delay: -0.3s;
+    animation-delay: -0.3s;
+}
+
+.wheels .normal-wheel {
+    height: 4vw;
+    width: 4vw;
+    -webkit-animation-delay: -0.6s;
+    animation-delay: -0.6s;
+}
+
+.locomotive {
+    height: 7vw;
+    width: 12vw;
+    border: .6vw solid #000;
+    background-color: #F69F00;
+    border-radius: 1vw;
+    position: relative;
+    float: left;
+    margin-top: 2.6vw;
+}
+
+.locomotive:before {
+    content: "";
+    width: 100%;
+    background: -webkit-linear-gradient(left, #000000 0%, #000000 8%, #f69f00 8%, #f69f00 15%, #000000 15%, #000000 28%, #000000 34%, #f69f00 34%, #f69f00 65%, #000000 65%, #000000 65%, #000000 100%);
+    background: linear-gradient(to right, #000000 0%, #000000 8%, #f69f00 8%, #f69f00 15%, #000000 15%, #000000 28%, #000000 34%, #f69f00 34%, #f69f00 65%, #000000 65%, #000000 65%, #000000 100%);
+    height: .6vw;
+    position: absolute;
+    top: 1.2vw;
+    left: 0;
+}
+
+.locomotive:after {
+    content: "";
+    width: 100%;
+    background: -webkit-linear-gradient(left, #000000 0%, #000000 24%, #f69f00 24%, #f69f00 65%, #f69f00 65%, #000000 65%, #000000 85%, #f69f00 85%, #f69f00 90%, #000000 90%, #000000 100%);
+    background: linear-gradient(to right, #000000 0%, #000000 24%, #f69f00 24%, #f69f00 65%, #f69f00 65%, #000000 65%, #000000 85%, #f69f00 85%, #f69f00 90%, #000000 90%, #000000 100%);
+    height: .6vw;
+    position: absolute;
+    top: 2.8vw;
+    left: 0;
+}
+
+.locomotive .wheels > div {
+    top: 4.4vw;
+    -webkit-animation-delay: -0.6s;
+    animation-delay: -0.6s;
+}
+
+.locomotive .wheels > div:first-child {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+.locomotive .normal-wheel:first-of-type {
+    left: .4vw;
+}
+
+.locomotive .normal-wheel:last-of-type {
+    right: .4vw;
+}
+
+.locomotive .trash {
+    height: 4vw;
+    width: 10vw;
+    position: absolute;
+    top: -5.2vw;
+    border-color: #000;
+    border-top: .6vw solid;
+    border-left: .6vw solid;
+    border-right: .6vw solid;
+    background-color: #3D9A01;
+    border-radius: 10vw 10vw 0 0;
+    left: .4vw;
+}
+
+.tracks {
+    position: relative;
+    width: 40vw;
+    bottom: -2vw;
+    left: -5vw;
+    overflow: hidden;
+    height: .6vw;
+}
+
+.tracks span {
+    display: inline;
+    height: .6vw;
+    width: 40vw;
+    position: absolute;
+    left: 40vw;
+    background: -webkit-linear-gradient(left, black 0%, black 30%, transparent 30%, transparent 39%, black 39%, black 61%, black 65%, transparent 65%, transparent 70%, black 71%, black 100%);
+    background: linear-gradient(to right, black 0%, black 30%, transparent 30%, transparent 39%, black 39%, black 61%, black 65%, transparent 65%, transparent 70%, black 71%, black 100%);
+    -webkit-animation: track 2s linear infinite;
+    animation: track 2s linear infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.tracks span:nth-child(2) {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+}
+
+.smokes:before,
+.smokes:after,
+.smokes span:before {
+    display: block;
+    content: "";
+    height: 1.5vw;
+    width: 1.5vw;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    right: 1.5vw;
+    bottom: 4vw;
+}
+
+.smokes:before {
+    -webkit-animation: smoke 1s linear infinite;
+    animation: smoke 1s linear infinite;
+}
+
+.smokes span:before {
+    -webkit-animation: smoke 1s linear infinite;
+    animation: smoke 1s linear infinite;
+    -webkit-animation-delay: -0.6s;
+    animation-delay: -0.6s;
+}
+
+.smokes:after {
+    -webkit-animation: smoke 1s linear infinite;
+    animation: smoke 1s linear infinite;
+    -webkit-animation-delay: -0.3s;
+    animation-delay: -0.3s;
+}
+
+@-webkit-keyframes smoke {
+    100% {
+        bottom: 12vw;
+        opacity: 0.5;
+    }
+}
+
+@keyframes smoke {
+    100% {
+        bottom: 12vw;
+        opacity: 0.5;
+    }
+}
+
+@-webkit-keyframes wheel-rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes wheel-rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes track {
+    100% {
+        left: -40vw;
+    }
+}
+
+@keyframes track {
+    100% {
+        left: -40vw;
+    }
+}
+
+
+/** Alphabets **/
+
+h1 {
+    font-family: "Bevan";
+    font-size: 30vw;
+    font-weight: 700;
+    line-height: 25vw;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    width: 60vw;
+    margin: 15vw auto 0px auto;
+    text-shadow: 0px 0px 0 rgb(-14, 144, 41), -1px 1px 0 rgb(-19, 139, 36), -2px 2px 0 rgb(-23, 135, 32), -3px 3px 0 rgb(-27, 131, 28), -4px 4px 0 rgb(-32, 126, 23), -5px 5px 0 rgb(-36, 122, 19), -6px 6px 0 rgb(-40, 118, 15), -7px 7px 0 rgb(-45, 113, 10), -8px 8px 0 rgb(-49, 109, 6), -9px 9px 0 rgb(-53, 105, 2), -10px 10px 0 rgb(-58, 100, -3), -11px 11px 0 rgb(-62, 96, -7), -12px 12px 0 rgb(-67, 91, -12), -13px 13px 0 rgb(-71, 87, -16), -14px 14px 0 rgb(-75, 83, -20), -15px 15px 0 rgb(-80, 78, -25), -16px 16px 0 rgb(-84, 74, -29), -17px 17px 0 rgb(-88, 70, -33), -18px 18px 0 rgb(-93, 65, -38), -19px 19px 0 rgb(-97, 61, -42), -20px 20px 0 rgb(-101, 57, -46);
+}
+
+h1 span {
+    position: relative
+}
+
+h1 span:first-child {
+    z-index: 15;
+}
+
+h1 span:nth-child(2) {
+    z-index: 14;
+    text-shadow: 0px 0px 0 rgb(167, 42, 152), -1px 1px 0 rgb(162, 37, 147), -2px 2px 0 rgb(158, 33, 143), -3px 3px 0 rgb(154, 29, 139), -4px 4px 0 rgb(149, 24, 134), -5px 5px 0 rgb(145, 20, 130), -6px 6px 0 rgb(141, 16, 126), -7px 7px 0 rgb(136, 11, 121), -8px 8px 0 rgb(132, 7, 117), -9px 9px 0 rgb(128, 3, 113), -10px 10px 0 rgb(123, -2, 108), -11px 11px 0 rgb(119, -6, 104), -12px 12px 0 rgb(114, -11, 99), -13px 13px 0 rgb(110, -15, 95), -14px 14px 0 rgb(106, -19, 91), -15px 15px 0 rgb(101, -24, 86), -16px 16px 0 rgb(97, -28, 82), -17px 17px 0 rgb(93, -32, 78), -18px 18px 0 rgb(88, -37, 73), -19px 19px 0 rgb(84, -41, 69), -20px 20px 0 rgb(80, -45, 65);
+}
+
+h1 span:nth-child(3) {
+    z-index: 19;
+    text-shadow: 0px 0px 0 rgb(42, 142, 167), -1px 1px 0 rgb(37, 137, 162), -2px 2px 0 rgb(33, 133, 158), -3px 3px 0 rgb(29, 129, 154), -4px 4px 0 rgb(24, 124, 149), -5px 5px 0 rgb(20, 120, 145), -6px 6px 0 rgb(16, 116, 141), -7px 7px 0 rgb(11, 111, 136), -8px 8px 0 rgb(7, 107, 132), -9px 9px 0 rgb(3, 103, 128), -10px 10px 0 rgb(-2, 98, 123), -11px 11px 0 rgb(-6, 94, 119), -12px 12px 0 rgb(-11, 89, 114), -13px 13px 0 rgb(-15, 85, 110), -14px 14px 0 rgb(-19, 81, 106), -15px 15px 0 rgb(-24, 76, 101), -16px 16px 0 rgb(-28, 72, 97), -17px 17px 0 rgb(-32, 68, 93), -18px 18px 0 rgb(-37, 63, 88), -19px 19px 0 rgb(-41, 59, 84), -20px 20px 0 rgb(-45, 55, 80);
+}
+
+h1 span:nth-child(4) {
+    z-index: 18;
+    text-shadow: 0px 0px 0 rgb(221, -5, 59), -1px 1px 0 rgb(216, -10, 54), -2px 2px 0 rgb(212, -14, 50), -3px 3px 0 rgb(208, -18, 46), -4px 4px 0 rgb(203, -23, 41), -5px 5px 0 rgb(199, -27, 37), -6px 6px 0 rgb(195, -31, 33), -7px 7px 0 rgb(190, -36, 28), -8px 8px 0 rgb(186, -40, 24), -9px 9px 0 rgb(182, -44, 20), -10px 10px 0 rgb(177, -49, 15), -11px 11px 0 rgb(173, -53, 11), -12px 12px 0 rgb(168, -58, 6), -13px 13px 0 rgb(164, -62, 2), -14px 14px 0 rgb(160, -66, -2), -15px 15px 0 rgb(155, -71, -7), -16px 16px 0 rgb(151, -75, -11), -17px 17px 0 rgb(147, -79, -15), -18px 18px 0 rgb(142, -84, -20), -19px 19px 0 rgb(138, -88, -24), -20px 20px 0 rgb(134, -92, -28);
+}
+
+.b {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 14px;
+    -ms-transform: rotate(25deg);
+    -moz-transform: rotate(25deg);
+    -o-transform: rotate(45deg);
+    -webkit-transform: rotate(25deg);
+    transform: rotate(25deg);
+    color: #f1b500
+}
+
+.d {
+    padding-left: 2px;
+}
+
+h2 {
+    font-size: 5vw;
+    text-align: center;
+    width: 100%;
+    background: red;
+    padding: 0;
+    margin: 2vw;
+}
+
+p {
+    text-align: center;
+    width: 100%;
+}
